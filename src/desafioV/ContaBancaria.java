@@ -4,20 +4,18 @@ public class ContaBancaria {
 	private String cliente;
 	private double saldo;
 	private String conta;
-
 	public void menu() {
-		System.out.println(
-	"MENU" +
-	"\n 1. Opção depositar"+
-	"\n 2. Opção sacar" +
-	"\n 3. Opção Consultar saldo" + 
-	"\n 4.sair");
 		Scanner leitura = new Scanner(System.in);
+		int digitarOpcao;
+	do{
+		System.out.println(
+		"MENU OPÇÕES" +
+		"\n 1. Depositar"+
+		"\n 2. Sacar" +
+		"\n 3. Consultar saldo" + 
+		"\n 4. Sair");
 		System.out.println("Digite sua opção: " );
-		int digitarOpcao = leitura.nextInt();
-	if(digitarOpcao == 0) {
-		System.out.println("Operação encerrada");
-	}
+		digitarOpcao = leitura.nextInt();
 	switch (digitarOpcao) {
 	case 1:
 		System.out.println("\n Depositar valor");
@@ -37,10 +35,12 @@ public class ContaBancaria {
 	default:
 		System.out.println("Opção inválida");
 		break;
-	} while (digitarOpcao != 4);
+	}
+	}
+	while (digitarOpcao != 4);
+	
 	leitura.close();
 	}
-	
 	public double getSaldo() {
 		return saldo;
 	}
@@ -85,3 +85,4 @@ public class ContaBancaria {
 	
 	}
 }
+

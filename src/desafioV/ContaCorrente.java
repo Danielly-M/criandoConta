@@ -19,9 +19,10 @@ public class ContaCorrente extends ContaBancaria{
 		//System.out.println(novaContaCorrente.exibeDadosCliente());
 		
 		//novaContaCorrente.depositar(100);
-		Scanner leitura = new Scanner(System.in);
+		
 		novaContaCorrente.menu();
 		//System.out.println("Depositar valor: " );
+		Scanner leitura = new Scanner(System.in);
 		double valorDeposito = leitura.nextDouble();
 		novaContaCorrente.depositar(valorDeposito);
 		
